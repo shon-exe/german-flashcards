@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German Flashcard Master</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>German Flashcards</h1>
+        
+        <div class="setup-area">
+            <div class="progress-wrapper">
+                <div id="progress-text">0 / 0 Words</div>
+                <div class="progress-bar"><div id="progress-fill"></div></div>
+            </div>
+
+            <div class="filter-section">
+                <select id="category-select">
+                    <option value="All">All Categories</option>
+                    <option value="Noun">Nouns</option>
+                    <option value="Adjective">Adjectives</option>
+                    <option value="Verb">Verbs</option>
+                    <option value="Adverb">Adverbs</option>
+                    <option value="Other">Other</option>
+                    <option value="Phrase">Phrases</option>
+                </select>
+                <button id="shuffle-btn">Shuffle</button>
+            </div>
+            <input type="file" id="excel-upload" accept=".xlsx, .xls" />
+        </div>
+        
+        <div id="card-container">
+            <div id="flashcard" class="card">
+                <div class="card-inner">
+                    <div class="card-front" id="front">Upload Excel</div>
+                    <div class="card-back">Check Details Below!</div>
+                </div>
+            </div>
+        </div>
+
+        <button id="reveal-btn"> Reveal Details</button>
+
+        <div id="details-panel" class="details-box">
+            <h3>Word Details</h3>
+            <div id="extra-info">Details will appear here...</div>
+        </div>
+
+        <div class="controls">
+            <button id="prev-btn">← Prev</button>
+            <button id="next-btn">Next →</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
